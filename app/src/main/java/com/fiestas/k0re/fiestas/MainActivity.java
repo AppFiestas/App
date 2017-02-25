@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 		Thread t = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				postData();
+				postData("pene");
 				
 			}
 		});
@@ -31,12 +31,12 @@ public class MainActivity extends Activity {
 
 	
 
-	public void postData() {
+	public void postData(String nombre) {
 
 		String fullUrl = "https://docs.google.com/forms/d/e/1FAIpQLScpPmIQ9W_Y1AGngC1aOMVoH6XKKYxCOSAF_KEG6KMvD-ddJg/formResponse";
 		HttpRequest mReq = new HttpRequest();
 		String col1 = "Apellidos";
-		String col2 = "Nombre";
+		String col2 = nombre;
 		String col3 = "Bachiller";
         String col4 = "1";
 		
